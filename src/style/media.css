@@ -26,7 +26,11 @@
     }
 }
 
-@media (prefers-color-scheme: dark) {
+html {
+    background-color: var(--theme-bg-color);
+}
+
+/* @media (prefers-color-scheme: dark) {
     .app {
         background-color: var(--dark-mode);
     }
@@ -43,5 +47,5 @@
     .save-2-pdf {
         background-color: var(--light-mode);
     }
-}
+} */
 

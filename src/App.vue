@@ -1,11 +1,11 @@
 <template>
-  <div class="app" :style="{ '--theme-color': themeColor }">
+  <div class="app">
     <div class="header">
       <div class="icon__wrapper">
         <i class="icon icon-printer" @click="save2pdf"></i>
       </div>
       <div class="icon__wrapper">
-        <i class="icon icon-reload" @click="themeColor = randomColor()"></i>
+        <i class="icon icon-reload"></i>
       </div>
     </div>
     <div class="container">
@@ -15,15 +15,12 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
 import Resume from "./RESUME.md";
-import { randomColor, printer } from "./markdown";
-
-const themeColor = ref(randomColor());
+import { printer } from "./markdown";
 
 const save2pdf = () => {
   const targetElement = document.querySelector(".container__wrapper");
-  printer(targetElement)
+  printer(targetElement);
 };
 </script>
 
@@ -31,7 +28,7 @@ const save2pdf = () => {
 .header {
   margin-bottom: 10px;
   color: var(--light-mode);
-  background-color: v-bind(themeColor);
+  background-color: var(--theme-color);
   padding: 10px 20px;
   box-sizing: border-box;
   border-radius: 3px;

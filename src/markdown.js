@@ -1,10 +1,5 @@
 import html2pdf from "html2pdf.js";
 
-export const randomColor = () => {
-  const randomNumber = Math.random().toString(16);
-  return `#${randomNumber.slice(2, 8)}`;
-};
-
 export const printer = (element) => {
   const opt = (element) => {
     return {
