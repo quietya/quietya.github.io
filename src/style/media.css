@@ -1,0 +1,47 @@
+@media screen and (max-width: 500px) {
+    .app {
+        padding: 10px;
+        box-sizing: border-box;
+        min-width: 300px;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .app {
+        padding: 80px;
+        box-sizing: border-box;
+    }
+
+    .container  {
+        margin: 0 auto;
+        width: 50%;
+        min-width: 600px;
+    }
+
+    .header {
+        margin: 0 auto;
+        margin-bottom: 10px;
+        width: 50%;
+        min-width: 600px;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .app {
+        background-color: var(--dark-mode);
+    }
+
+    .save-2-pdf {
+        background-color: var(--dark-mode);
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    .app {
+        background-color: var(--light-mode);
+    }
+    .save-2-pdf {
+        background-color: var(--light-mode);
+    }
+}
+
