@@ -15,8 +15,18 @@
 </template>
 
 <script setup>
+import { onMounted, onBeforeUnmount } from "vue";
 import Resume from "./RESUME.md";
 import { printer } from "./markdown";
+import { startSakura, stopSakura } from "./sakura";
+
+onMounted(() => {
+  startSakura();
+});
+
+onBeforeUnmount(() => {
+  stopSakura();
+});
 
 const save2pdf = () => {
   const targetElement = document.querySelector(".container__wrapper");
